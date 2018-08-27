@@ -40,7 +40,7 @@ while a in data and a+window-1 in data:
         comp[a] = string + 'NA'
     else:
         avg = sum(error)/len(error)
-        comp[a] = string + '%1.2f'%(avg - avg%.01)
+        comp[a] = string + '%1.2f'%(avg)
     a += 1
 
 
