@@ -1,5 +1,3 @@
-import numpy as np
-import time
 #####
 #reading the data
 data = dict()#actual data
@@ -42,7 +40,7 @@ while a in data and a+window-1 in data:
     if len(error) == 0:#if there is no match
         comp[a] = string + 'NA'
     else:
-        comp[a] = string + '%1.2f'%np.average(error)
+        comp[a] = string + '%1.2f'%(sum(error)/len(error))
     a += 1
 
 
