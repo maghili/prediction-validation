@@ -26,7 +26,6 @@ with open('./input/window.txt') as w:
          window = int(line.rstrip('\n'))
 w.close()
 
-t0 = time.time()
 comp = dict()#comparison dictionary
 a = 1;
 while a in data and a+window-1 in data:
@@ -49,5 +48,4 @@ for key in comp:
     f.write(comp[key]+'\n')
 f.close()
 
-t1 = time.time()
 print 'time elapsed: ', t1-t0
