@@ -28,25 +28,26 @@ with open('./input/window.txt') as w:
          window = int(line.rstrip('\n'))
 w.close()
 
-t0 = time.time()#to start timing the calculations
+t0 = time.time()
 comp = dict()#comparison dictionary
 a = 1;
 while a in data and a+window-1 in data:
-    error = []; string = ''; w = 0
+    error = []; string = '%d|%d|'%(a, a+window-1); w = 0
     while w < window:
-        string += '%d|'%(a+w)
         for stock in data[a+w]:
-            if stock in predict[a+w]:
+            if a+w in predict and stock in predict[a+w]: #only the ones that are in the prediction will be counted
                 error.append(abs(data[a+w][stock] - predict[a+w][stock]))
         w += 1
-    if len(error) > 0:
+    if len(error) == 0:#if there is no match
+        comp[a] = string + 'NA'
+    else:
         comp[a] = string + '%1.2f'%np.average(error)
     a += 1
 
 
 for key in comp:
     f = open('./output/comparison.txt', 'a')
-    f.write('\n'+comp[key])
+    f.write(comp[key]+'\n')
 f.close()
 
 t1 = time.time()
