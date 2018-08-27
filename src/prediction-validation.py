@@ -48,5 +48,3 @@ for key in comp:
     f = open('./output/comparison.txt', 'a')
     f.write(comp[key]+'\n')
 f.close()
-
-print 'time elapsed: ', t1-t0
