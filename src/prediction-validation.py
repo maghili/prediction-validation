@@ -32,7 +32,8 @@ t0 = time.time()
 comp = dict()#comparison dictionary
 a = 1;
 while a in data and a+window-1 in data:
-    error = []; string = '%d|%d|'%(a, a+window-1); w = 0
+    error = []; string = '%d|%d|'%(a, a+window-1) #Not including the intermediate hours based on format suggestion in FAQ 
+    w = 0
     while w < window:
         for stock in data[a+w]:
             if a+w in predict and stock in predict[a+w]: #only the ones that are in the prediction will be counted
