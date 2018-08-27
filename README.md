@@ -18,7 +18,7 @@ resembling the following table:
     <th colspan = 3>time1</th>
     <th colspan = 3>time2</th>
     <th > ... </th>
-    <td colspan = 3>timen</th>
+    <th colspan = 3>timen</th>
   </tr>
   <tr>
      <td>stock1</td>
