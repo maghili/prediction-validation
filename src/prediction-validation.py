@@ -39,8 +39,7 @@ while a in data and a+window-1 in data:
     if len(error) == 0:#if there is no match
         comp[a] = string + 'NA'
     else:
-        avg = sum(error)/len(error)
-        comp[a] = string + '%1.2f'%(avg)
+        comp[a] = string + '%1.2f'%(sum(error)/len(error))
     a += 1
 
 
