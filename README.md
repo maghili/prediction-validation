@@ -3,7 +3,7 @@ prediction validation of a data science model
 
 The method that I have chosen here to compile the data in the fastest possible way is to use python dictionaries inside dictionaries.
 
-I put each of the Actual data `actual.txt` and the redicted data `predicted.txt`, inside separate dictionaries with the `time` as their key, and then within ech of those dictionaries I create another dictionary at each `time` with `stock` as the key and then the value of the `stock` goes into them.
+I put each of the Actual data `actual.txt` and the predicted data `predicted.txt`, inside separate dictionaries with the `time` as their key, and then within ech of those dictionaries I create another dictionary at each `time` with `stock` as the key and then the value of the `stock` goes into them.
 
 ```
 ActualData = {time1: {stock1: value, stock2: value, ...}, time2: {stock1: value, ...},\
